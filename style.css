@@ -21,11 +21,23 @@ header {
 
 /* Estilo de las tarjetas (secciones) */
 .card {
-    background: white;
-    padding: 20px;
-    margin-bottom: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-left: 5px solid #3498db; /* Una barrita lateral de color */
+}
+
+.card:hover {
+    transform: translateY(-5px); /* Se eleva un poquito */
+    box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+}
+
+ul li {
+    list-style: none;
+    padding: 5px 0;
+}
+
+ul li::before {
+    content: "🚀"; /* Iconos personalizados para la lista */
+    margin-right: 10px;
 }
 
 h2 {
