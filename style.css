@@ -1,63 +1,105 @@
-/* Importar fuente moderna */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
 body {
     font-family: 'Poppins', sans-serif;
-    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%); /* Fondo con degradado */
-    min-height: 100vh;
+    background-color: #f0f2f5;
+    color: #1a1a2e;
+    line-height: 1.6;
 }
 
+/* Encabezado con estilo profesional */
 header {
-    background: #1a1a2e; /* Un azul más profundo */
-    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+    color: #ffffff;
+    padding: 60px 20px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
 
-/* Contenedor principal */
+header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    letter-spacing: 1px;
+}
+
+header p {
+    font-weight: 300;
+    opacity: 0.9;
+}
+
+/* Contenedor central */
 .container {
     max-width: 800px;
-    margin: 20px auto;
+    margin: -40px auto 40px; /* Sube un poco para entrar en el header */
     padding: 0 20px;
 }
 
-/* Estilo de las tarjetas (secciones) */
+/* Tarjetas Blancas y Limpias */
 .card {
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    border-left: 5px solid #3498db; /* Una barrita lateral de color */
+    background: #ffffff;
+    padding: 40px;
+    margin-bottom: 25px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    border-left: 6px solid #3498db;
+    transition: all 0.3s ease;
 }
 
 .card:hover {
-    transform: translateY(-5px); /* Se eleva un poquito */
-    box-shadow: 0 10px 20px rgba(0,0,0,0.15);
-}
-
-ul li {
-    list-style: none;
-    padding: 5px 0;
-}
-
-ul li::before {
-    content: "🚀"; /* Iconos personalizados para la lista */
-    margin-right: 10px;
+    transform: translateY(-8px);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.1);
 }
 
 h2 {
-    color: #2c3e50;
-    border-bottom: 2px solid #3498db;
-    display: inline-block;
-    padding-bottom: 5px;
+    color: #1a1a2e;
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
 }
 
-@media (max-width: 600px) {
-    header h1 {
-        font-size: 1.5rem;
-    }
-    .container {
-        padding: 0 10px;
-    }
+/* Estilo de la lista */
+ul {
+    list-style: none;
 }
 
+ul li {
+    background: #f8f9fa;
+    margin: 10px 0;
+    padding: 12px 15px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    transition: 0.2s;
+}
+
+ul li:hover {
+    background: #eef2f7;
+}
+
+ul li::before {
+    content: "🚀";
+    margin-right: 15px;
+}
+
+/* Pie de página */
 footer {
+    text-align: center;
+    padding: 40px 20px;
     background: #1a1a2e;
-    color: #bdc3c7;
-    margin-top: 40px;
+    color: #ffffff;
+    font-size: 0.9rem;
+}
+
+/* Ajustes para móviles */
+@media (max-width: 600px) {
+    header h1 { font-size: 1.8rem; }
+    .container { margin-top: 20px; }
+    .card { padding: 25px; }
 }
